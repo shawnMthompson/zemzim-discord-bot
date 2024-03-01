@@ -8,3 +8,7 @@ export const config = {
     TOKEN: 'x',
     CLIENT_ID: 'x'
   };
+  
+[Refer Here](https://imgur.com/a/CaHNq39)
+
+
