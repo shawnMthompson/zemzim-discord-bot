@@ -1,5 +1,2 @@
-# Ignore Node.js modules
-node_modules/
-
 # Ignore config.js
 config.js
