@@ -11,4 +11,8 @@ export const config = {
   
 [Refer Here](https://imgur.com/a/CaHNq39)
 
+# Missing Features
+* /help command
+* /teamsof # command 
 
+Will be implemented by the end of March 2024
