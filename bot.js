@@ -38,7 +38,7 @@ try {
 }
 
 // ----------- IMPORTS ----------- //
-import { Client, GatewayIntentBits, EmbedBuilder } from 'discord.js';
+import { Client, GatewayIntentBits } from 'discord.js';
 const client = new Client({ 
   intents: [
     GatewayIntentBits.Guilds,
