@@ -3,7 +3,6 @@ import { config } from './config.js';
 import { coinflip } from './commands/coinflip.js';
 import { randomorder } from './commands/randomOrder.js';
 
-// ----------- COMMANDS ----------- //
 const commands = [
   {
     name: 'randomorder',
@@ -23,7 +22,6 @@ const commands = [
   }
 ];
 
-// ----------- UNIQUE KEYS ----------- //
 const { TOKEN, CLIENT_ID } = config;
 const rest = new REST({ version: '10' }).setToken(TOKEN);
 
@@ -37,7 +35,6 @@ try {
   console.error(error);
 }
 
-// ----------- IMPORTS ----------- //
 import { Client, GatewayIntentBits } from 'discord.js';
 const client = new Client({ 
   intents: [
@@ -52,7 +49,6 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-// ----------- COMMAND FUNCTIONS ----------- //
 client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
