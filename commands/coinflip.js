@@ -7,11 +7,11 @@ export async function coinflip(interaction){
     console.log(`'${interaction.user.username}' chose ['${userChoice}'] and flipped the coin with the result of [${flipResult}].`);
     let outcome;
     if ((flipResult === 'It\'s Heads!' && userChoice === 'heads') || (flipResult === 'It\'s Tails!' && userChoice === 'tails')) {
-      outcome = 'You\'ve Won :D';
+      outcome = `${interaction.user.username} won :D`;
       console.log(`'${interaction.user.username}' won the coin flip.`)  
     }
     else {
-      outcome = 'You\'ve Lost D:';
+      outcome = `${interaction.user.username} lost D:`;
       console.log(`'${interaction.user.username}' lost the coin flip.`)  
     }
     
