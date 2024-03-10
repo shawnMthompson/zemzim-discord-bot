@@ -15,6 +15,7 @@ In order to fully set up the bot and get it running on Discord, refer to the Dis
 
 # Missing Features
 * /help command
-* /teamsof # command 
+* /teamsof # command
+* channel-scope / server-scope variations of randomorder and teamsof # command
 
 Will be implemented by the end of March 2024.
