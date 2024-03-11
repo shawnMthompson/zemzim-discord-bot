@@ -7,6 +7,24 @@ const commands = [
   {
     name: 'randomorder',
     description: 'Generates a Random Order of All Users within the Discord (excluding Bots).',
+    options: [
+    {
+      name: 'scope',
+      description: 'Specify the scope of random ordering',
+      type: 3,
+      required: true,
+      choices: [
+        {
+          name: 'Server',
+          value: 'server'
+        },
+        {
+          name: 'Channel',
+          value: 'channel'
+        }
+      ]
+    }
+    ]
   },
   {
     name: 'coinflip',
