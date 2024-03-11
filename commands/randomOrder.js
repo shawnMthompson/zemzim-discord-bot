@@ -1,5 +1,5 @@
-import { buildEmbed } from "./functions/buildEmbed.js";
-import { shuffle } from "./functions/shuffle.js";
+import { buildEmbed } from "../functions/buildEmbed.js";
+import { shuffle } from "../functions/shuffle.js";
 
 export async function randomOrderServer(interaction){
     await interaction.guild.members.fetch();
