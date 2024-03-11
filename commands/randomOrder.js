@@ -1,21 +1,5 @@
-import { EmbedBuilder } from "discord.js";
-
-function shuffle(array){
-    for (let i = array.length - 1; i > 0; i--){
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-function buildEmbed(title, description){
-    return new EmbedBuilder()
-    .setTitle(title)
-    .setDescription(description)
-    .setColor('#b200ed')
-    .setTimestamp();
-}
-
+import { buildEmbed } from "./functions/buildEmbed.js";
+import { shuffle } from "./functions/shuffle.js";
 
 export async function randomOrderServer(interaction){
     await interaction.guild.members.fetch();
@@ -40,6 +24,7 @@ export async function randomOrderServer(interaction){
 
     await interaction.reply({ embeds: [embed] });
 }
+
 export async function randomOrderChannel(interaction){
     const channel = interaction.channel;
 
