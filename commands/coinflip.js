@@ -1,4 +1,4 @@
-import { EmbedBuilder } from "discord.js";
+import { buildEmbed } from "../functions/buildEmbed.js";
 
 export async function coinflip(interaction){
     const sides = ['It\'s Heads!', 'It\'s Tails!'];
@@ -15,11 +15,7 @@ export async function coinflip(interaction){
       console.log(`'${interaction.user.username}' lost the coin flip.`)  
     }
     
-    const embed = new EmbedBuilder()
-    .setTitle('Coin Flip')
-    .setDescription(`${flipResult}\n\n${outcome}`)
-    .setColor('#b200ed')
-    .setTimestamp();
+    const embed = buildEmbed('Coin Flip', `${flipResult}\n\n${outcome}`);
 
     await interaction.reply({ embeds: [embed] });
 }
