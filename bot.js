@@ -6,7 +6,7 @@ import { randomorder } from './commands/randomOrder.js';
 const commands = [
   {
     name: 'randomorder',
-    description: 'Generates a Random Order of All Users within the Discord (excluding Bots).',
+    description: 'Generates a random order of users within a server or a specific channel (excluding Bots).',
     options: [
     {
       name: 'scope',
@@ -32,9 +32,19 @@ const commands = [
     options: [
       {
         name: 'side',
-        description: 'Choose a side of the coin (heads or tails)',
+        description: 'Choose a side of the coin',
         type: 3,
-        required: true
+        required: true,
+        choices: [
+          {
+            name: 'Heads',
+            value: 'heads'
+          },
+          {
+            name: 'Tails',
+            value: 'tails'
+          }
+        ]
       }
     ]
   }
