@@ -88,7 +88,7 @@ client.on('interactionCreate', async interaction => {
       await coinflip(interaction);
       break;
     default:
-      console.log("The command was not recognized.")
+      await interaction.reply({ content: 'The command was not recognized or received.', ephemeral: true});
       break;
   }
 });
