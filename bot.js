@@ -2,6 +2,7 @@ import { REST, Routes } from 'discord.js';
 import { config } from './config.js';
 import { coinflip } from './commands/coinflip.js';
 import { randomorder } from './commands/randomOrder.js';
+import { help } from './commands/help.js';
 
 const commands = [
   {
@@ -10,7 +11,7 @@ const commands = [
     options: [
     {
       name: 'scope',
-      description: 'Specify the scope of random ordering',
+      description: 'Specify the scope of random ordering.',
       type: 3,
       required: true,
       choices: [
@@ -32,7 +33,7 @@ const commands = [
     options: [
       {
         name: 'side',
-        description: 'Choose a side of the coin',
+        description: 'Choose a side of the coin.',
         type: 3,
         required: true,
         choices: [
@@ -47,6 +48,10 @@ const commands = [
         ]
       }
     ]
+  },
+  {
+    name: 'help',
+    description: 'View a list of all commands.'
   }
 ];
 
@@ -86,6 +91,9 @@ client.on('interactionCreate', async interaction => {
       break;
     case 'coinflip':
       await coinflip(interaction);
+      break;
+    case 'help':
+      await help({interaction, ephemeral: true});
       break;
     default:
       await interaction.reply({ content: 'The command was not recognized or received.', ephemeral: true});
