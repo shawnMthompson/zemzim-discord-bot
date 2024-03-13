@@ -1,6 +1,21 @@
 import { buildEmbed } from "../functions/buildEmbed.js";
 import { shuffle } from "../functions/shuffle.js";
 
+export async function randomorder(interaction){
+    const scope = interaction.options.getString('scope');
+
+    switch (scope) {
+        case 'server':
+            await randomOrderServer(interaction);
+            break;
+        case 'channel':
+            await randomOrderChannel(interaction);
+            break;
+        default:
+            await interaction.reply({ content: 'Invalid Scope Provided.', ephemeral: true});
+    }
+}
+
 export async function randomOrderServer(interaction){
     await interaction.guild.members.fetch();
     const members = Array.from(interaction.guild.members.cache.values());
@@ -47,19 +62,4 @@ export async function randomOrderChannel(interaction){
     const embed = buildEmbed('Random Order (Channel)', response);
 
     await interaction.reply({ embeds: [embed] });
-}
-
-export async function randomorder(interaction){
-    const scope = interaction.options.getString('scope');
-
-    switch (scope) {
-        case 'server':
-            await randomOrderServer(interaction);
-            break;
-        case 'channel':
-            await randomOrderChannel(interaction);
-            break;
-        default:
-            await interaction.reply({ content: 'Invalid Scope Provided.', ephemeral: true});
-    }
 }
