@@ -2,7 +2,7 @@ import { REST, Routes } from 'discord.js';
 import { config } from './config.js';
 import { coinflip } from './commands/coinflip.js';
 import { randomorder } from './commands/randomOrder.js';
-import { help } from './commands/help.js';
+import { displayHelp } from './commands/displayHelp.js';
 
 const commands = [
   {
@@ -93,7 +93,7 @@ client.on('interactionCreate', async interaction => {
       await coinflip(interaction);
       break;
     case 'help':
-      await help({interaction, ephemeral: true});
+      await displayHelp(interaction);
       break;
     default:
       await interaction.reply({ content: 'The command was not recognized or received.', ephemeral: true});

@@ -1,6 +1,6 @@
 import { EmbedBuilder } from "discord.js";
 
-export async function help(interaction){
+export async function displayHelp(interaction){
     const embed = new EmbedBuilder()
     .setTitle('Zemzim Commands')
     .setDescription('/coinflip [sides]\n\n/randomorder [scope]')
