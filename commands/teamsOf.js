@@ -1,6 +1,6 @@
 import { buildEmbed } from "../functions/buildEmbed.js";
 
-export async function teamsOf(interaction){
+export async function teamsof(interaction){
     const scope = interaction.options.getString('scope');
 
     switch (scope) {
