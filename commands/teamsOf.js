@@ -16,14 +16,14 @@ export async function teamsof(interaction){
 }
 
 export async function teamsOfServer(interaction){
-    // Import # input from User
-    // const membersPerTeam = interaction.options.getString('membersPerTeam');
+    const membersPerTeam = interaction.options.getString('#');
 
     //const embed = buildEmbed('Teams of # (Server)', response);   # Replace '#' with user-input teams of # and use `
 
     await interaction.reply({ embeds: [embed] });
 }
 export async function teamsOfChannel(interaction){
+    const membersPerTeam = interaction.options.getString('#');
 
     //const embed = buildEmbed('Teams of # (Channel)', response);   # Replace '#' with user-input teams of # and use `
 

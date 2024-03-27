@@ -46,6 +46,12 @@ const commands = [
             value: 'channel'
           }
         ]
+      },
+      {
+        name: '#',
+        description: 'Specify the # of members per team.',
+        type: 3,
+        required: true
       }
     ]
   },
