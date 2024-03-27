@@ -7,24 +7,46 @@ import { displayHelp } from './commands/displayHelp.js';
 const commands = [
   {
     name: 'randomorder',
-    description: 'Generates a random order of users within a server or a specific channel (excluding Bots).',
+    description: 'Generates a random order of members within a server or a specific channel (excluding Bots).',
     options: [
-    {
-      name: 'scope',
-      description: 'Specify the scope of random ordering.',
-      type: 3,
-      required: true,
-      choices: [
-        {
-          name: 'Server',
-          value: 'server'
-        },
-        {
-          name: 'Channel',
-          value: 'channel'
-        }
-      ]
-    }
+      {
+        name: 'scope',
+        description: 'Specify the scope of random ordering.',
+        type: 3,
+        required: true,
+        choices: [
+          {
+            name: 'Server',
+            value: 'server'
+          },
+          {
+            name: 'Channel',
+            value: 'channel'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'teamsof',
+    description: 'Generates a random pairing of members within a specific server or a specific channel (exlcuding Bots). The # of members in a team are determined by the user.',
+    options: [
+      {
+        name: 'scope',
+        description: 'Specify the scope of random ordering.',
+        type: 3,
+        required: true,
+        choices: [
+          {
+            name: 'Server',
+            value: 'server'
+          },
+          {
+            name: 'Channel',
+            value: 'channel'
+          }
+        ]
+      }
     ]
   },
   {
