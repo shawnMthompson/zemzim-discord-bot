@@ -12,8 +12,3 @@ export const config = {
 [Refer Here](https://imgur.com/a/CaHNq39)
 
 In order to fully set up the bot and get it running on Discord, refer to the Discord Developer Platform linked [here](https://discord.com/developers/docs/intro).
-
-# Missing Features
-* /teamsof # command
-
-Will be implemented by the end of March 2024.
