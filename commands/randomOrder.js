@@ -33,9 +33,6 @@ export async function randomOrderServer(interaction){
     const nonBotMembers = members.filter(member => !member.user.bot)
     const usernames = nonBotMembers.map(member => member.user.username);
 
-    console.log('Number of Members in Server:', usernames.length);
-    console.log('Member usernames:', usernames);
-
     const randomOrder = shuffle(usernames);
 
     let response = formatUsernames(randomOrder);
@@ -53,9 +50,6 @@ export async function randomOrderChannel(interaction){
     const usernames = members.map(member => member.user.username);
 
     const randomOrder = shuffle(usernames)
-
-    console.log('Number of Members in Channel:', usernames.length);
-    console.log('Member usernames:', usernames);
 
     let response = formatUsernames(randomOrder);
 
