@@ -8,11 +8,9 @@ export async function coinflip(interaction){
     let outcome;
     if ((flipResult === 'It\'s Heads!' && userChoice === 'heads') || (flipResult === 'It\'s Tails!' && userChoice === 'tails')) {
       outcome = `${interaction.user.username} won :D`;
-      console.log(`'${interaction.user.username}' won the coin flip.`)  
     }
     else {
-      outcome = `${interaction.user.username} lost D:`;
-      console.log(`'${interaction.user.username}' lost the coin flip.`)  
+      outcome = `${interaction.user.username} lost D:`; 
     }
     
     const embed = buildEmbed('Coin Flip', `${flipResult}\n\n${outcome}`);
