@@ -4,6 +4,7 @@ import { coinflip } from './commands/coinflip.js';
 import { randomorder } from './commands/randomOrder.js';
 import { displayHelp } from './commands/displayHelp.js';
 import { teamsof } from './commands/teamsOf.js';
+import { poll } from './commands/poll.js';
 
 const commands = [
   {
@@ -79,6 +80,24 @@ const commands = [
     ]
   },
   {
+    name: 'poll',
+    description: 'Create a poll with a question and choices.',
+    options: [
+      {
+        name: 'question',
+        description: 'Enter the question for the poll.',
+        type: 3,
+        required: true
+      },
+      {
+        name: 'choices',
+        description: 'Enter the choices for the poll. (Seperated by commas (e.g. Choice 1, Choice 2))',
+        type: 3,
+        required: true
+      }
+    ]
+  },
+  {
     name: 'help',
     description: 'View a list of all commands.'
   }
@@ -123,6 +142,9 @@ client.on('interactionCreate', async interaction => {
       break;
     case 'teamsof':
       await teamsof(interaction);
+      break;
+    case 'poll':
+      await poll(interaction);
       break;
     case 'help':
       await displayHelp(interaction);
