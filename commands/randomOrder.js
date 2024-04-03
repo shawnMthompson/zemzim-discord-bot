@@ -16,6 +16,16 @@ export async function randomorder(interaction){
     }
 }
 
+function formatUsernames(randomOrder){
+    let order = 1;
+    let response = '';
+    for (const username of randomOrder) {
+        response += `Order ${order}: ${username}\n`;
+        order++;
+    }
+    return response;
+}
+
 export async function randomOrderServer(interaction){
     await interaction.guild.members.fetch();
     const members = Array.from(interaction.guild.members.cache.values());
@@ -28,12 +38,7 @@ export async function randomOrderServer(interaction){
 
     const randomOrder = shuffle(usernames);
 
-    let order = 1;
-    let response = '';
-    for (const username of randomOrder) {
-        response += `Order ${order}: ${username}\n`;
-        order++;
-    }
+    let response = formatUsernames(randomOrder);
 
     const embed = buildEmbed('Random Order (Server)', response);
 
@@ -52,12 +57,7 @@ export async function randomOrderChannel(interaction){
     console.log('Number of Members in Channel:', usernames.length);
     console.log('Member usernames:', usernames);
 
-    let order = 1;
-    let response = '';
-    for (const username of randomOrder) {
-        response += `Order ${order}: ${username}\n`;
-        order++;
-    }
+    let response = formatUsernames(randomOrder);
 
     const embed = buildEmbed('Random Order (Channel)', response);
 
