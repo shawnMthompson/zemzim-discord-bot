@@ -3,6 +3,7 @@ import { config } from './config.js';
 import { coinflip } from './commands/coinflip.js';
 import { randomorder } from './commands/randomOrder.js';
 import { displayHelp } from './commands/displayHelp.js';
+import { teamsof } from './commands/teamsOf.js';
 
 const commands = [
   {
@@ -29,7 +30,7 @@ const commands = [
   },
   {
     name: 'teamsof',
-    description: 'Generates a random pairing of members within a specific server or a specific channel (exlcuding Bots). The # of members in a team are determined by the user.',
+    description: 'Generates a random pairing of members within a specific server or a specific channel.',
     options: [
       {
         name: 'scope',
@@ -48,7 +49,7 @@ const commands = [
         ]
       },
       {
-        name: '#',
+        name: 'num',
         description: 'Specify the # of members per team.',
         type: 3,
         required: true
@@ -119,6 +120,9 @@ client.on('interactionCreate', async interaction => {
       break;
     case 'coinflip':
       await coinflip(interaction);
+      break;
+    case 'teamsof':
+      await teamsof(interaction);
       break;
     case 'help':
       await displayHelp(interaction);
