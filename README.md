@@ -12,3 +12,7 @@ export const config = {
 [Refer Here](https://imgur.com/a/CaHNq39)
 
 In order to fully set up the bot and get it running on Discord, refer to the Discord Developer Platform linked [here](https://discord.com/developers/docs/intro).
+
+# Upcoming Features
+* Option to automatically create text/voice channels for teams with the /teamsof command. 
+  * Still contemplating on how I want to handle the upkeep/deletion of these channels post-creation.
