@@ -1,2 +1,5 @@
 # Ignore config.js | Required for Upload to GitHub Repo
 config.js
+
+# Ignore node_modules | Required for Upload to GitHub Repo
+node_modules
