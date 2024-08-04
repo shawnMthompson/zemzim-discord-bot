@@ -13,7 +13,7 @@
   },
   "keywords": ["discord", "bot", "zemzim", "tournament", "random", "order", "flip", "coin", "50/50", "pair", "team"],
   "author": "Shawn Thompson",
-  "license": "ISC",
+  "license": "MIT",
   "description": "Zemzim is a bot with tournament functionality that can help to generate a randomized order of members for games, flip coins for 50/50s, generate random pairs for teams, and more!"
   
   
