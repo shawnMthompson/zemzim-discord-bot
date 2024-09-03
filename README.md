@@ -14,3 +14,7 @@ export const config = {
 [Refer Here](https://imgur.com/a/CaHNq39)
 
 In order to fully set up the bot and get it running on Discord, refer to the Discord Developer Platform linked [here](https://discord.com/developers/docs/intro).
+
+# Tasks
+- Rework .gitignore (e.g. excluding the ds_store file.
+- Refactor unoptimized and redundant code, as well as comments for clarity.
