@@ -16,5 +16,6 @@ export const config = {
 In order to fully set up the bot and get it running on Discord, refer to the Discord Developer Platform linked [here](https://discord.com/developers/docs/intro).
 
 # Tasks
-- Rework .gitignore (e.g. excluding the ds_store file.
+- Rework .gitignore (e.g. excluding the ds_store file.) (sample one of the basic node ones)
 - Refactor unoptimized and redundant code, as well as comments for clarity.
+- Migrate `config.js` to a `.env` file for security and easier manipulation; ensure to add the dependency first of course. Change the 'Important Information' section appropriately
