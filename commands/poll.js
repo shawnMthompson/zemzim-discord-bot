@@ -7,7 +7,7 @@ export async function poll(interaction) {
 
   const embed = buildEmbed(
     question,
-    options.map((option, index) => `${index + 1}️⃣ ${option}`).join("\n")
+    options.map((option, index) => `${index + 1}️⃣ ${option}`).join("\n"),
   );
 
   await interaction.deferReply();
