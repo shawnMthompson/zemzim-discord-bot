@@ -1,20 +1,30 @@
 {
   "dependencies": {
-    "discord.js": "^14.14.1"
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
   },
   "name": "zemzim-discord-bot",
   "type": "module",
   "version": "1.0.0",
   "main": "bot.js",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bot.js"
   },
-  "keywords": ["discord", "bot", "zemzim", "tournament", "random", "order", "flip", "coin", "50/50", "pair", "team"],
+  "keywords": [
+    "discord",
+    "bot",
+    "zemzim",
+    "tournament",
+    "random",
+    "order",
+    "flip",
+    "coin",
+    "50/50",
+    "pair",
+    "team"
+  ],
   "author": "Shawn Thompson",
   "license": "MIT",
   "description": "Zemzim is a bot with tournament functionality that can help to generate a randomized order of members for games, flip coins for 50/50s, generate random pairs for teams, and more!"
-  
-  
 }

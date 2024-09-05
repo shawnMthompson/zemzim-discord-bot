@@ -1,5 +1,7 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import { REST, Routes } from "discord.js";
-import { config } from "./config.js";
 import { coinflip } from "./commands/coinflip.js";
 import { randomorder } from "./commands/randomOrder.js";
 import { displayHelp } from "./commands/displayHelp.js";
@@ -106,7 +108,9 @@ const commands = [
   },
 ];
 
-const { TOKEN, CLIENT_ID } = config;
+const TOKEN = process.env.TOKEN;
+const CLIENT_ID = process.env.CLIENT_ID;
+
 const rest = new REST({ version: "10" }).setToken(TOKEN);
 
 (async () => {
