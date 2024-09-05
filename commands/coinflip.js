@@ -7,8 +7,8 @@ export async function coinflip(interaction) {
 
   let outcome;
   if (
-    (flipResult === "It's Heads!" && userChoice === "heads") ||
-    (flipResult === "It's Tails!" && userChoice === "tails")
+    (flipResult === sides[0] && userChoice === "heads") ||
+    (flipResult === sides[1] && userChoice === "tails")
   ) {
     outcome = `${interaction.user.username} won :D`;
   } else {
