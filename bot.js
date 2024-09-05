@@ -1,5 +1,6 @@
+import fs from "fs";
+import path from "path";
 import dotenv from "dotenv";
-dotenv.config();
 
 import { REST, Routes } from "discord.js";
 import { coinflip } from "./commands/coinflip.js";
@@ -7,107 +8,17 @@ import { randomorder } from "./commands/randomOrder.js";
 import { displayHelp } from "./commands/displayHelp.js";
 import { teamsof } from "./commands/teamsOf.js";
 import { poll } from "./commands/poll.js";
+import { fileURLToPath } from "url";
 
-const commands = [
-  {
-    name: "randomorder",
-    description:
-      "Generates a random order of members within a server or a specific channel (excluding Bots).",
-    options: [
-      {
-        name: "scope",
-        description: "Specify the scope of random ordering.",
-        type: 3,
-        required: true,
-        choices: [
-          {
-            name: "Server",
-            value: "server",
-          },
-          {
-            name: "Channel",
-            value: "channel",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: "teamsof",
-    description:
-      "Generates a random pairing of members within a specific server or a specific channel.",
-    options: [
-      {
-        name: "scope",
-        description: "Specify the scope of random ordering.",
-        type: 3,
-        required: true,
-        choices: [
-          {
-            name: "Server",
-            value: "server",
-          },
-          {
-            name: "Channel",
-            value: "channel",
-          },
-        ],
-      },
-      {
-        name: "num",
-        description: "Specify the # of members per team.",
-        type: 3,
-        required: true,
-      },
-    ],
-  },
-  {
-    name: "coinflip",
-    description: "Returns heads or tails.",
-    options: [
-      {
-        name: "side",
-        description: "Choose a side of the coin.",
-        type: 3,
-        required: true,
-        choices: [
-          {
-            name: "Heads",
-            value: "heads",
-          },
-          {
-            name: "Tails",
-            value: "tails",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: "poll",
-    description: "Create a poll with a question and choices.",
-    options: [
-      {
-        name: "question",
-        description: "Enter the question for the poll.",
-        type: 3,
-        required: true,
-      },
-      {
-        name: "choices",
-        description:
-          "Enter the choices for the poll. (Separated by commas (e.g. Choice 1, Choice 2))",
-        type: 3,
-        required: true,
-      },
-    ],
-  },
-  {
-    name: "help",
-    description: "View a list of all commands.",
-  },
-];
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const commandsFilePath = path.join(__dirname, "commands.json");
+const commandsData = fs.readFileSync(commandsFilePath, "utf8");
+const commands = JSON.parse(commandsData);
+
+dotenv.config();
 const TOKEN = process.env.TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 

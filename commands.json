@@ -1,0 +1,96 @@
+[
+  {
+    "name": "randomorder",
+    "description": "Generates a random order of members within a server or a specific channel (excluding Bots).",
+    "options": [
+      {
+        "name": "scope",
+        "description": "Specify the scope of random ordering.",
+        "type": 3,
+        "required": true,
+        "choices": [
+          {
+            "name": "Server",
+            "value": "server"
+          },
+          {
+            "name": "Channel",
+            "value": "channel"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "teamsof",
+    "description": "Generates a random pairing of members within a specific server or a specific channel.",
+    "options": [
+      {
+        "name": "scope",
+        "description": "Specify the scope of random ordering.",
+        "type": 3,
+        "required": true,
+        "choices": [
+          {
+            "name": "Server",
+            "value": "server"
+          },
+          {
+            "name": "Channel",
+            "value": "channel"
+          }
+        ]
+      },
+      {
+        "name": "num",
+        "description": "Specify the # of members per team.",
+        "type": 3,
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "coinflip",
+    "description": "Returns heads or tails.",
+    "options": [
+      {
+        "name": "side",
+        "description": "Choose a side of the coin.",
+        "type": 3,
+        "required": true,
+        "choices": [
+          {
+            "name": "Heads",
+            "value": "heads"
+          },
+          {
+            "name": "Tails",
+            "value": "tails"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "poll",
+    "description": "Create a poll with a question and choices.",
+    "options": [
+      {
+        "name": "question",
+        "description": "Enter the question for the poll.",
+        "type": 3,
+        "required": true
+      },
+      {
+        "name": "choices",
+        "description": "Enter the choices for the poll. (Separated by commas (e.g. Choice 1, Choice 2))",
+        "type": 3,
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "help",
+    "description": "View a list of all commands."
+  }
+]
