@@ -1,14 +1,14 @@
 import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
-
+import { fileURLToPath } from "url";
 import { REST, Routes } from "discord.js";
+
 import { coinflip } from "./commands/coinflip.js";
 import { randomorder } from "./commands/randomOrder.js";
 import { displayHelp } from "./commands/displayHelp.js";
 import { teamsof } from "./commands/teamsOf.js";
 import { poll } from "./commands/poll.js";
-import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

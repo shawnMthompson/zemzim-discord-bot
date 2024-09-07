@@ -6,7 +6,6 @@ Utilized JavaScript and Node.js to architect and implement a bot, capitalizing o
 
 In order to clone the bot, you must first install Node.js and run `npm install` to install all necessary dependencies in order to allow the bot to function. You will also need to create a `.env` file at the root of the project folder and place the appropriate `TOKEN=x` and `CLIENT_ID=x` for your bot.
 
-
 In order to fully set up the bot and get it running on Discord, refer to the Discord Developer Platform linked [here](https://discord.com/developers/docs/intro).
 
 # Tasks
