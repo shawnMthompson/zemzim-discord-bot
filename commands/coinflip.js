@@ -1,4 +1,4 @@
-import { buildEmbed } from "../functions/buildEmbed.js";
+import { buildEmbed } from "../utilities/buildEmbed.js";
 
 export async function coinflip(interaction) {
   const sides = ["It's Heads!", "It's Tails!"];

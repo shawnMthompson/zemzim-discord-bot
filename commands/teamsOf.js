@@ -1,5 +1,5 @@
-import { buildEmbed } from "../functions/buildEmbed.js";
-import { shuffle } from "../functions/shuffle.js";
+import { buildEmbed } from "../utilities/buildEmbed.js";
+import { shuffle } from "../utilities/shuffle.js";
 
 export async function teamsof(interaction) {
   const scope = interaction.options.getString("scope");

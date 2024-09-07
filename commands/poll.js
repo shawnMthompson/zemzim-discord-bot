@@ -1,4 +1,4 @@
-import { buildEmbed } from "../functions/buildEmbed.js";
+import { buildEmbed } from "../utilities/buildEmbed.js";
 
 // This command is fairly unnecessary with Discord's official poll feature, but there isn't much harm in leaving the command here regardless.
 export async function poll(interaction) {
